@@ -92,9 +92,9 @@ router.post('/login', (req, res, next) => {
 
 
 router.get('/verify', isAuthenticated, (req, res, next) => {
-    setTimeout(() => {
-        res.status(200).json(req.payload)
-    }, 2000)
+
+    res.status(200).json(req.payload)
+
 })
 //este middleware protege rutas. si el token no es válido no te deja entrar.y si es válido, te deja dentro de la ruta quién es el user que está conectado.(equivale a req.session())
 
